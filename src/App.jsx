@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ParticlesBackground from './components/ParticlesBackground';
 import './particles.css';
+import Footer from "./components/Footer";
 import {
   ArrowLeft,
   Layers,
@@ -73,7 +74,7 @@ export default function Preview() {
         Species: "Holothuria atra",
       },
       description:
-        "Secara morfologi, *Holothuria atra* memiliki penampang tubuh bulat dengan sisi ventral yang cenderung datar, serta lubang anus yang bulat. Warna tubuhnya hitam, dengan kulit tubuh yang lembut dan tebal. Hewan ini ditemukan di daerah bersubstrat pasir kasar dan sering kali tubuhnya diselimuti oleh pasir halus (Elfidasari et al., 2012). Menurut Tangko (2009), teripang ini memiliki 20 tentakel yang mengelilingi bagian mulut seperti rumbai elastis, yang berfungsi untuk menangkap makanan. Pada bagian perut yang pipih atau rata, ditemukan banyak kaki tabung (ambulaktral). Teripang memiliki bentuk tubuh memanjang. Pada salah satu ujung tubuhnya terdapat tentakel yang mengelilingi lubang mulut, yang digunakan untuk menangkap mangsa. Kaki-kaki tabung (podia) merupakan kaki semu yang terletak di sisi ventral tubuh. Jika dilihat dari penampang tubuhnya, teripang tampak memiliki bentuk bulat, setengah lingkaran, persegi, trapesium, atau bulat memanjang seperti ular.",
+        "Secara morfologi, Holothuria atra memiliki penampang tubuh bulat dengan sisi ventral yang cenderung datar, serta lubang anus yang bulat. Warna tubuhnya hitam, dengan kulit tubuh yang lembut dan tebal. Hewan ini ditemukan di daerah bersubstrat pasir kasar dan sering kali tubuhnya diselimuti oleh pasir halus (Elfidasari et al., 2012). Menurut Tangko (2009), teripang ini memiliki 20 tentakel yang mengelilingi bagian mulut seperti rumbai elastis, yang berfungsi untuk menangkap makanan. Pada bagian perut yang pipih atau rata, ditemukan banyak kaki tabung (ambulaktral). Teripang memiliki bentuk tubuh memanjang. Pada salah satu ujung tubuhnya terdapat tentakel yang mengelilingi lubang mulut, yang digunakan untuk menangkap mangsa. Kaki-kaki tabung (podia) merupakan kaki semu yang terletak di sisi ventral tubuh. Jika dilihat dari penampang tubuhnya, teripang tampak memiliki bentuk bulat, setengah lingkaran, persegi, trapesium, atau bulat memanjang seperti ular.",
       habitat: "Dasar laut berpasir dan terumbu karang",
       status: "Rentan",
     },
@@ -119,7 +120,7 @@ export default function Preview() {
         Species: "Culcita sp.",
       },
       description:
-        "*Culcita sp.* merupakan jenis bintang laut dengan lengan berbentuk segi lima dan tubuh tebal seperti roti. Warna tubuhnya kuning kecoklatan (Agustina, 2012). Bintang laut ini termasuk dalam filum Echinodermata dan dapat hidup di berbagai habitat, seperti zona rataan terumbu, daerah pertumbuhan alga, padang lamun, koloni karang hidup, dan karang mati (Yusron, 2010). Secara morfologi, *Culcita sp.* memiliki bentuk simetris radial, dengan bagian bawah tubuh dilengkapi kaki tabung yang berfungsi sebagai cakram penyedot (Kastawi, 2005). Bintang laut ini menggunakan kaki tabungnya untuk menempel pada bebatuan, merangkak secara perlahan, dan menjerat mangsa seperti remis dan tiram (Lariman, 2011).",
+        "Culcita sp. merupakan jenis bintang laut dengan lengan berbentuk segi lima dan tubuh tebal seperti roti. Warna tubuhnya kuning kecoklatan (Agustina, 2012). Bintang laut ini termasuk dalam filum Echinodermata dan dapat hidup di berbagai habitat, seperti zona rataan terumbu, daerah pertumbuhan alga, padang lamun, koloni karang hidup, dan karang mati (Yusron, 2010). Secara morfologi, Culcita sp. memiliki bentuk simetris radial, dengan bagian bawah tubuh dilengkapi kaki tabung yang berfungsi sebagai cakram penyedot (Kastawi, 2005). Bintang laut ini menggunakan kaki tabungnya untuk menempel pada bebatuan, merangkak secara perlahan, dan menjerat mangsa seperti remis dan tiram (Lariman, 2011).",
       habitat: "Terumbu karang dan padang lamun",
       status: "Belum Dievaluasi",
     },
@@ -141,7 +142,7 @@ export default function Preview() {
         Species: "Tridacna maxima",
       },
       description:
-        "*Tridacna maxima* termasuk dalam filum Bivalvia yang berukuran besar dan mudah dikenali karena memiliki warna khas serta sebagian besar hidup berasosiasi dengan ekosistem terumbu karang. Keberadaannya di ekosistem terumbu karang memiliki fungsi ekologis penting, seperti menjadi biofilter alami untuk mengatur proses eutrofikasi dan memproduksi kalsium karbonat yang mendukung pertumbuhan terumbu karang (Soo & Todd, 2014; Vicentuan-Cabaitan et al., 2014; Neo et al., 2015). Bentuk, ukuran, dan warna khas pada mantelnya menjadi ciri utama sekaligus daya tarik *Tridacna maxima*. Hal ini membuatnya bernilai ekonomi tinggi, karena baik cangkang maupun dagingnya dapat dimanfaatkan sebagai bahan kerajinan, terutama kerajinan tangan (Neo & Loh, 2015).",
+        "Tridacna maxima termasuk dalam filum Bivalvia yang berukuran besar dan mudah dikenali karena memiliki warna khas serta sebagian besar hidup berasosiasi dengan ekosistem terumbu karang. Keberadaannya di ekosistem terumbu karang memiliki fungsi ekologis penting, seperti menjadi biofilter alami untuk mengatur proses eutrofikasi dan memproduksi kalsium karbonat yang mendukung pertumbuhan terumbu karang (Soo & Todd, 2014; Vicentuan-Cabaitan et al., 2014; Neo et al., 2015). Bentuk, ukuran, dan warna khas pada mantelnya menjadi ciri utama sekaligus daya tarik Tridacna maxima. Hal ini membuatnya bernilai ekonomi tinggi, karena baik cangkang maupun dagingnya dapat dimanfaatkan sebagai bahan kerajinan, terutama kerajinan tangan (Neo & Loh, 2015).",
       habitat: "Terumbu karang dangkal",
       status: "Rentan",
     },
@@ -164,7 +165,7 @@ export default function Preview() {
         Species: "Macrocypraea cervinetta",
       },
       description:
-        "Daerah pasang surut berbatu merupakan salah satu habitat yang dihuni oleh *Macrocypraea cervinetta* dan dianggap sebagai salah satu lingkungan laut yang paling beragam (Tait & Dipper, 1998). Habitat *Macrocypraea cervinetta* terletak di pesisir pantai dengan perluasan yang luas serta ditandai oleh beragam kondisi lingkungan mikro. Salah satu ciri khasnya adalah cangkang berbentuk spiral, meskipun bentuk ini tidak selalu tampak pada saat dewasa tetapi muncul pada tahap tertentu dalam perkembangannya (López & Urcuyo, 2009).",
+        "Daerah pasang surut berbatu merupakan salah satu habitat yang dihuni oleh Macrocypraea cervinetta dan dianggap sebagai salah satu lingkungan laut yang paling beragam (Tait & Dipper, 1998). Habitat Macrocypraea cervinetta terletak di pesisir pantai dengan perluasan yang luas serta ditandai oleh beragam kondisi lingkungan mikro. Salah satu ciri khasnya adalah cangkang berbentuk spiral, meskipun bentuk ini tidak selalu tampak pada saat dewasa tetapi muncul pada tahap tertentu dalam perkembangannya (López & Urcuyo, 2009).",
       habitat: "Terumbu karang dan area berbatu",
       status: "Belum Dievaluasi",
     },
@@ -381,13 +382,14 @@ export default function Preview() {
   };
 
   const SpeciesImage = ({ src, alt, className, size = "default" }) => {
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-    const [loaded, setLoaded] = useState(false);
 
+    // Modifikasi sizeClasses untuk menambahkan fixed height
     const sizeClasses = {
       thumbnail: "w-12 h-12",
       default: "w-full h-64",
-      large: "w-full h-96",
+      large: "w-full h-96"
     };
 
     const containerClass = `
@@ -396,13 +398,17 @@ export default function Preview() {
       ${sizeClasses[size]} 
       ${className || ""} 
       bg-gray-50 
-      rounded-lg 
-      border-2 
-      border-gray-200 
-      ${loaded ? "border-opacity-0" : "border-opacity-100"}
+      rounded-lg
       transition-all 
       duration-300
     `;
+
+    // Tampilan loading
+    const renderPlaceholder = () => (
+      <div className="absolute inset-0 flex items-center justify-center bg-gray-100 animate-pulse">
+        <ImageIcon className="w-12 h-12 text-gray-300" />
+      </div>
+    );
 
     if (error) {
       return (
@@ -416,12 +422,17 @@ export default function Preview() {
 
     return (
       <div className={containerClass}>
+        {loading && renderPlaceholder()}
         <img
           src={src}
           alt={alt}
-          className="w-full h-full object-cover"
-          onError={() => setError(true)}
-          onLoad={() => setLoaded(true)}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'
+            }`}
+          onLoad={() => setLoading(false)}
+          onError={() => {
+            setError(true);
+            setLoading(false);
+          }}
         />
       </div>
     );
@@ -440,7 +451,8 @@ export default function Preview() {
 
       <div className="space-y-6">
         {/* Image Section */}
-        <div className="relative w-full h-64 rounded-xl overflow-hidden">
+        {/* Image Section */}
+        <div className="relative w-full rounded-xl overflow-hidden"> {/* Menghapus h-64 */}
           <SpeciesImage
             src={selectedSpecies.imageUrl}
             alt={selectedSpecies.name}
@@ -558,20 +570,6 @@ export default function Preview() {
                 <span className="ml-2 font-bold text-gray-800">WildLife</span>
               </div>
 
-              <div className="hidden md:flex items-center space-x-8">
-                <button className="text-gray-600 hover:text-green-600">
-                  Beranda
-                </button>
-                <button className="text-gray-600 hover:text-green-600">
-                  Kategori
-                </button>
-                <button className="text-gray-600 hover:text-green-600">
-                  Tentang
-                </button>
-                <button className="text-gray-600 hover:text-green-600">
-                  Kontak
-                </button>
-              </div>
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -606,6 +604,7 @@ export default function Preview() {
           {view === "rankView" && renderRankView()}
           {view === "species" && renderSpeciesDetail()}
         </div>
+        <Footer />
       </div>
     </div>
   );
