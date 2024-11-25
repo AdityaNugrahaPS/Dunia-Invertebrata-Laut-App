@@ -28,7 +28,6 @@ import {
 
 export default function Preview() {
   const [view, setView] = useState("home");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedRank, setSelectedRank] = useState(null);
   const [selectedSpecies, setSelectedSpecies] = useState(null);
 
@@ -569,14 +568,6 @@ export default function Preview() {
                 <Leaf className="w-6 h-6 text-green-600" />
                 <span className="ml-2 font-bold text-gray-800">WildLife</span>
               </div>
-
-
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden text-gray-600 hover:text-green-600 text-xl"
-              >
-                {mobileMenuOpen ? "✕" : "☰"}
-              </button>
             </div>
 
 
