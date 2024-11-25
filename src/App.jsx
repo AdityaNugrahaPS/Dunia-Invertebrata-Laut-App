@@ -579,22 +579,7 @@ export default function Preview() {
               </button>
             </div>
 
-            {mobileMenuOpen && (
-              <div className="md:hidden py-2">
-                <button className="block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50">
-                  Beranda
-                </button>
-                <button className="block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50">
-                  Kategori
-                </button>
-                <button className="block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50">
-                  Tentang
-                </button>
-                <button className="block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50">
-                  Kontak
-                </button>
-              </div>
-            )}
+
           </div>
         </nav>
 
