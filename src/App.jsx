@@ -11,6 +11,7 @@ import {
   Quote,
   Fish,
   Home,
+  Shield,
   FileText,
   Award,
   Feather,
@@ -187,6 +188,44 @@ export default function Preview() {
     },
   ];
 
+  const renderMereng = () => (
+    <div className="bg-white rounded-xl p-6 shadow-lg space-y-6">
+      <BackButton onClick={() => setView("home")} text="Kembali ke Beranda" />
+
+      <div className="text-center">
+        <div className="flex justify-center items-center mb-4">
+          <Feather className="w-8 h-8 text-green-600 mr-3" />
+          <h2 className="text-2xl font-bold text-green-700">Mereng: Serenade Biota Laut</h2>
+        </div>
+        <p className="text-gray-600 mb-6">Puisi ilmiah yang merenungkan keindahan spesies laut</p>
+      </div>
+
+      <div className="prose prose-green max-w-prose mx-auto">
+        <p className="italic text-gray-700">
+          Oh, <span className="font-bold text-green-700">Dipsastraea speciosa</span>, ratu karang yang cemerlang,<br />
+          Dinding labirintmu bersinar dalam cahaya air,<br />
+          <span className="font-bold text-green-700">Holothuria atra</span>, hitam tengah malam yang lincah,<br />
+          Meluncur di pasir di mana arus lembut mendekat.
+        </p>
+        <p className="italic text-gray-700">
+          <span className="font-bold text-green-700">Favia speciosa</span>, maze kehidupan berbatu,<br />
+          Di mana polip menari melampaui kesulitan ekologis,<br />
+          <span className="font-bold text-green-700">Culcita sp.</span>, bintang laut bulat seperti roti emas,<br />
+          Lenganmu merentang seperti kelopak lembut.
+        </p>
+      </div>
+
+      <div className="text-center mt-6">
+        <button
+          onClick={() => setView("home")}
+          className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors"
+        >
+          Kembali Menjelajah
+        </button>
+      </div>
+    </div>
+  );
+
   const BackButton = ({ onClick, text = "Kembali" }) => (
     <button
       onClick={onClick}
@@ -316,56 +355,6 @@ export default function Preview() {
     </div>
   );
 
-  const speciesPoems = {
-    "Dipsastraea speciosa": {
-      verse: "Coral queen so bright, with walls of light,\nYour polyps dance in aqua's might.",
-      italic: ["coral queen", "walls of light"]
-    },
-    "Holothuria atra": {
-      verse: "Midnight black and sleek you glide,\nThrough sandy realms where secrets hide.",
-      italic: ["midnight black", "sandy realms"]
-    },
-    "Favia speciosa": {
-      verse: "Maze of stone where life unfurls,\nYour labyrinth of coral swirls.",
-      italic: ["maze of stone", "labyrinth of coral"]
-    },
-    "Culcita sp.": {
-      verse: "Starfish round as golden bread,\nRadial arms so gently spread.",
-      italic: ["starfish round", "golden bread"]
-    },
-    "Tridacna maxima": {
-      verse: "Giant clam of oceanic grace,\nYour mantle shimmers in this place.",
-      italic: ["giant clam", "oceanic grace"]
-    },
-    "Macrocypraea cervinetta": {
-      verse: "Shell of wonder, spiral rare,\nWhispering secrets beyond compare.",
-      italic: ["shell of wonder", "spiral rare"]
-    },
-    "Pitar tumens": {
-      verse: "Bivalve filtering ocean's floor,\nLife's rhythm in each gentle roar.",
-      italic: ["bivalve filtering", "ocean's floor"]
-    }
-  };
-
-  const renderVerse = (verse, italicWords) => {
-    // Split the verse into words
-    const words = verse.split(/\s+/);
-
-    return words.map((word, index) => {
-      // Check if this word or a phrase containing this word should be italic
-      const shouldItalicize = italicWords.some(italicPhrase =>
-        verse.includes(italicPhrase) &&
-        italicPhrase.split(' ').includes(word)
-      );
-
-      return (
-        <span key={index}>
-          {shouldItalicize ? <em>{word}</em> : word}{' '}
-        </span>
-      );
-    });
-  };
-
   const renderRankView = () => {
     // Mengambil nilai unik berdasarkan selectedRank
     const uniqueValues = [
@@ -485,7 +474,8 @@ export default function Preview() {
 
       <div className="space-y-6">
         {/* Image Section */}
-        <div className="relative w-full rounded-xl overflow-hidden">
+        {/* Image Section */}
+        <div className="relative w-full rounded-xl overflow-hidden"> {/* Menghapus h-64 */}
           <SpeciesImage
             src={selectedSpecies.imageUrl}
             alt={selectedSpecies.name}
@@ -565,10 +555,10 @@ export default function Preview() {
           <p className="text-gray-600 ml-7">{selectedSpecies.habitat}</p>
         </div>
 
-        {/* Lokasi Ditemukan Section */}
+        {/* Conservation Status Section diganti dengan Lokasi Ditemukan */}
         <div className="space-y-2">
           <div className="flex items-center space-x-2">
-            <GitBranch className="w-5 h-5 text-green-600" />
+            <GitBranch className="w-5 h-5 text-green-600" /> {/* Changed to GitBranch */}
             <h3 className="font-semibold text-green-700">Lokasi Ditemukan</h3>
           </div>
           <div className="ml-7">
@@ -584,22 +574,6 @@ export default function Preview() {
             </span>
           </div>
         </div>
-
-        {/* Puisi Spesies Section */}
-        {speciesPoems[selectedSpecies.name] && (
-          <div className="space-y-2 mt-4 bg-green-50 p-4 rounded-lg">
-            <div className="flex items-center space-x-2">
-              <Quote className="w-5 h-5 text-green-600" />
-              <h3 className="font-semibold text-green-700">Mereng: Puisi Spesies</h3>
-            </div>
-            <p className="text-gray-600 ml-7 italic">
-              {renderVerse(
-                speciesPoems[selectedSpecies.name].verse,
-                speciesPoems[selectedSpecies.name].italic
-              )}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
