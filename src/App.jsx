@@ -14,7 +14,7 @@ import {
   Home,
   FileText,
   Award,
-  Feather,
+  MapPin,
   Dna, // untuk Phylum
   Network, // untuk Class
   GitBranch, // untuk Ordo
@@ -583,14 +583,13 @@ export default function Preview() {
         {/* Conservation Status Section diganti dengan Lokasi Ditemukan */}
         <div className="space-y-2">
           <div className="flex items-center space-x-2">
-            <GitBranch className="w-5 h-5 text-green-600" /> {/* Changed to GitBranch */}
+            <MapPin className="w-5 h-5 text-green-600" /> {/* Changed from GitBranch to MapPin */}
             <h3 className="font-semibold text-green-700">Lokasi Ditemukan</h3>
           </div>
           <div className="ml-7">
             <span
               className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-800`}
             >
-              <GitBranch className="w-4 h-4" />
               <span>
                 {selectedSpecies.name === "Pitar tumens" || selectedSpecies.name === "Spisula subtruncata"
                   ? "Pulau Setan"
