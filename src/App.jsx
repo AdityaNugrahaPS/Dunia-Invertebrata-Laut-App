@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ParticlesBackground from './components/ParticlesBackground';
+import Navbar from "./components/Navbar";
 import './particles.css';
 import Footer from "./components/Footer";
 import {
@@ -11,7 +12,6 @@ import {
   Quote,
   Fish,
   Home,
-  Shield,
   FileText,
   Award,
   Feather,
@@ -25,6 +25,7 @@ import {
 export default function Preview() {
   const [view, setView] = useState("home");
   const [selectedRank, setSelectedRank] = useState(null);
+  const [selectedPhylum, setSelectedPhylum] = useState(null);
   const [selectedSpecies, setSelectedSpecies] = useState(null);
 
   const speciesData = [
@@ -186,45 +187,53 @@ export default function Preview() {
       habitat: "Dasar laut berpasir",
       status: "Belum Dievaluasi",
     },
+    {
+      name: "Spongia sp.",
+      imageUrl: "./images/spongia-sp.jpg",
+      author: {
+        name: "Linnaeus",
+        year: 1759,
+        citation: "Linnaeus, C. (1759) Systema Naturae",
+      },
+      taxonomy: {
+        Kingdom: "Animalia",
+        Phylum: "Porifera",
+        Class: "Demospongiae",
+        Ordo: "Dyctyoceratida",
+        Family: "Spongiidae",
+        Genus: "Spongia",
+        Species: "Spongia sp.",
+      },
+      description:
+        "Spongia sp. termasuk ke dalam filum Porifera dengan bentuk tubuh asimetris dan berlubang-lubang. Memiliki warna tubuh cokelat gelap dengan tipe kanal leucon yang kompleks. Ostium membentuk kanal-kanal incurrent yang tidak semuanya memiliki choanocytes. Aliran air dipompa secara selektif melalui kanal-kanal berflagella dan dikeluarkan melalui beberapa bukaan oskulum.",
+      habitat: "Dasar laut dengan substrat keras",
+      status: "Belum Dievaluasi",
+    },
+    {
+      name: "Spisula subtruncata",
+      imageUrl: "./images/spisula-subtruncata.jpg",
+      author: {
+        name: "Autor Belum Diketahui",
+        year: null,
+        citation: "",
+      },
+      taxonomy: {
+        Kingdom: "Animalia",
+        Phylum: "Mollusca",
+        Class: "Bivalvia",
+        Ordo: "Venerida",
+        Family: "Mactridae",
+        Genus: "Spisula",
+        Species: "Spisula subtruncata",
+      },
+      description:
+        "Kerang dengan cangkang berbentuk oval hingga segitiga, berwarna putih kekuningan atau krem pucat. Memiliki permukaan halus dengan garis pertumbuhan samar. Hidup di dasar laut berpasir atau berlumpur pada kedalaman 5-50 meter. Sebagai filter feeder, memakan plankton dan partikel organik di air.",
+      habitat: "Dasar laut berpasir atau berlumpur",
+      status: "Belum Dievaluasi",
+    },
   ];
 
-  const renderMereng = () => (
-    <div className="bg-white rounded-xl p-6 shadow-lg space-y-6">
-      <BackButton onClick={() => setView("home")} text="Kembali ke Beranda" />
 
-      <div className="text-center">
-        <div className="flex justify-center items-center mb-4">
-          <Feather className="w-8 h-8 text-green-600 mr-3" />
-          <h2 className="text-2xl font-bold text-green-700">Mereng: Serenade Biota Laut</h2>
-        </div>
-        <p className="text-gray-600 mb-6">Puisi ilmiah yang merenungkan keindahan spesies laut</p>
-      </div>
-
-      <div className="prose prose-green max-w-prose mx-auto">
-        <p className="italic text-gray-700">
-          Oh, <span className="font-bold text-green-700">Dipsastraea speciosa</span>, ratu karang yang cemerlang,<br />
-          Dinding labirintmu bersinar dalam cahaya air,<br />
-          <span className="font-bold text-green-700">Holothuria atra</span>, hitam tengah malam yang lincah,<br />
-          Meluncur di pasir di mana arus lembut mendekat.
-        </p>
-        <p className="italic text-gray-700">
-          <span className="font-bold text-green-700">Favia speciosa</span>, maze kehidupan berbatu,<br />
-          Di mana polip menari melampaui kesulitan ekologis,<br />
-          <span className="font-bold text-green-700">Culcita sp.</span>, bintang laut bulat seperti roti emas,<br />
-          Lenganmu merentang seperti kelopak lembut.
-        </p>
-      </div>
-
-      <div className="text-center mt-6">
-        <button
-          onClick={() => setView("home")}
-          className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors"
-        >
-          Kembali Menjelajah
-        </button>
-      </div>
-    </div>
-  );
 
   const BackButton = ({ onClick, text = "Kembali" }) => (
     <button
@@ -268,7 +277,7 @@ export default function Preview() {
             <h3 className="text-xl font-semibold">Phylum Beragam</h3>
           </div>
           <p className="text-gray-600">
-            Temukan keunikan spesies dari berbagai Phylum: Cnidaria, Echinodermata, Mollusca, dan lainnya.
+            Temukan keunikan spesies dari berbagai Phylum: Cnidaria, Echinodermata, dan Mollusca
           </p>
         </div>
 
@@ -306,31 +315,36 @@ export default function Preview() {
               title: "Cnidaria",
               description: "Kelompok hewan bertubuh lunak dengan sel penyengat",
               species: ["Dipsastraea speciosa", "Favia speciosa"],
-              icon: Dna
+              icon: Dna,
+              count: 2
             },
             {
               title: "Echinodermata",
               description: "Hewan berkulit duri dengan sistem saraf sederhana",
               species: ["Holothuria atra", "Culcita sp."],
-              icon: Network
-            },
-            {
-              title: "Mollusca",
-              description: "Hewan lunak dengan cangkang atau kulit keras",
-              species: ["Tridacna maxima", "Pitar tumens", "Macrocypraea cervinetta"],
-              icon: GitBranch
+              icon: Network,
+              count: 2
             },
             {
               title: "Porifera",
               description: "Hewan paling sederhana, berbentuk seperti spons",
               species: ["Spongia sp."],
-              icon: Leaf
+              icon: Leaf,
+              count: 1
+            },
+            {
+              title: "Mollusca",
+              description: "Hewan lunak dengan cangkang atau kulit keras",
+              species: ["Tridacna maxima", "Pitar tumens", "Macrocypraea cervinetta", "Spisula subtruncata"],
+              icon: GitBranch,
+              count: 4
             }
           ].map((phylum) => (
             <div
               key={phylum.title}
               onClick={() => {
                 setSelectedRank("Phylum");
+                setSelectedPhylum(phylum.title);
                 setView("rankView");
               }}
               className="bg-green-50 rounded-xl p-4 mb-3 cursor-pointer hover:bg-green-100 transition-colors"
@@ -344,6 +358,9 @@ export default function Preview() {
                     <div className="mt-2 text-xs text-green-700">
                       Spesies: {phylum.species.join(", ")}
                     </div>
+                    <div className="text-xs text-green-700">
+                      Total Spesies: {phylum.count}
+                    </div>
                   </div>
                 </div>
                 <span className="text-green-500 text-xl">→</span>
@@ -356,49 +373,57 @@ export default function Preview() {
   );
 
   const renderRankView = () => {
-    // Mengambil nilai unik berdasarkan selectedRank
-    const uniqueValues = [
-      ...new Set(speciesData.map((species) => species.taxonomy[selectedRank])),
-    ];
+    // Group species by Phylum
+    const phylumGroups = speciesData.reduce((acc, species) => {
+      const phylum = species.taxonomy.Phylum;
+      if (!acc[phylum]) {
+        acc[phylum] = [];
+      }
+      acc[phylum].push(species);
+      return acc;
+    }, {});
 
     return (
       <div className="grid gap-4">
-        {/* Tombol kembali untuk kembali ke kategori */}
         <BackButton onClick={() => setView("categories")} />
 
-        {/* Daftar kategori berdasarkan nilai unik */}
-        <div className="grid gap-4">
-          {uniqueValues.map((value) => {
-            // Menyaring spesies berdasarkan nilai rank yang dipilih
-            const speciesInRank = speciesData.filter(
-              (species) => species.taxonomy[selectedRank] === value
-            );
+        <div className="bg-white rounded-xl p-6 shadow-lg">
+          <h2 className="text-xl font-bold text-green-700 mb-4">
+            Spesies berdasarkan Phylum {selectedPhylum}
+          </h2>
+          {selectedPhylum && phylumGroups[selectedPhylum] && (
+            <div className="grid md:grid-cols-2 gap-4">
+              {phylumGroups[selectedPhylum].map((sp) => (
+                <div
+                  key={sp.name}
+                  className="border-2 border-green-200 rounded-xl p-4 cursor-pointer hover:border-green-400 transition-all"
+                  onClick={() => {
+                    setSelectedSpecies(sp);
+                    setView("species");
+                  }}
+                >
+                  <div className="flex flex-col space-y-4">
+                    {/* Species Image */}
+                    <div className="w-full h-48 overflow-hidden rounded-lg">
+                      <img
+                        src={sp.imageUrl}
+                        alt={sp.name}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform"
+                      />
+                    </div>
 
-            return (
-              <div
-                key={value}
-                className="bg-white rounded-xl p-4 shadow-lg cursor-pointer hover:bg-green-50"
-                onClick={() => {
-                  // Mengatur spesies yang dipilih dan menampilkan tampilan spesies
-                  setSelectedSpecies(speciesInRank[0]);
-                  setView("species");
-                }}
-              >
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center space-x-4">
-                    {/* Menampilkan gambar spesies */}
-                    <SpeciesImage
-                      src={speciesInRank[0].imageUrl}
-                      alt={value}
-                      size="thumbnail"
-                    />
-                    <span className="text-lg text-gray-800">{value}</span>
+                    {/* Species Name */}
+                    <div className="text-center">
+                      <h3 className="text-lg font-semibold text-green-700">
+                        {sp.name}
+                      </h3>
+                      <p className="text-sm text-gray-600">{sp.habitat}</p>
+                    </div>
                   </div>
-                  <span className="text-green-500">→</span>
                 </div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          )}
         </div>
       </div>
     );
@@ -585,18 +610,7 @@ export default function Preview() {
       </div>
 
       <div className="relative z-10 min-h-screen bg-green-50/80">
-        <nav className="bg-white/90 backdrop-blur-sm shadow-md">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <Leaf className="w-6 h-6 text-green-600" />
-                <span className="ml-2 font-bold text-gray-800">WildLife</span>
-              </div>
-            </div>
-
-
-          </div>
-        </nav>
+        <Navbar />
 
         <div className="max-w-2xl mx-auto px-4 py-8">
           {view === "home" && renderHome()}
