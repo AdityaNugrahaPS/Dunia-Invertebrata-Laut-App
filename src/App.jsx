@@ -5,23 +5,18 @@ import Footer from "./components/Footer";
 import {
   ArrowLeft,
   Layers,
-  Library,
   Image as ImageIcon,
-  AlertTriangle,
   User,
   Calendar,
   Quote,
   Fish,
   Home,
-  Shield,
   FileText,
   Award,
-  Crown, // untuk Kingdom
+  Feather,
   Dna, // untuk Phylum
   Network, // untuk Class
   GitBranch, // untuk Ordo
-  Users, // untuk Family
-  TreePine, // untuk Genus
   Leaf, // untuk Species
 } from "lucide-react";
 
@@ -205,57 +200,56 @@ export default function Preview() {
   const renderHome = () => (
     <div className="space-y-8">
       <div className="w-full bg-green-600 text-white p-8 text-center rounded-lg">
-        <h1 className="text-3xl font-bold mb-4">Jelajahi Dunia Biota Laut</h1>
+        <h1 className="text-3xl font-bold mb-4">Eksplorasi Biota Laut Indonesia</h1>
         <p className="text-lg mb-6">
-          Temukan keindahan dan keunikan beragam spesies biota laut di Indonesia
+          Temukan keragaman hayati laut Indonesia melalui klasifikasi dan deskripsi spesies
         </p>
         <button
           onClick={() => setView("categories")}
-          className="bg-white text-green-600 px-6 py-2 rounded-full font-semibold"
+          className="bg-white text-green-600 px-6 py-2 rounded-full font-semibold hover:bg-green-50 transition-colors"
         >
-          Mulai Eksplorasi
+          Mulai Jelajahi Spesies
         </button>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-white p-6 rounded-xl shadow-lg">
+        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <div className="flex items-center space-x-4 mb-4">
-            <Layers className="w-8 h-8 text-green-600" />
-            <h3 className="text-xl font-semibold">Klasifikasi Lengkap</h3>
+            <Dna className="w-8 h-8 text-green-600" />
+            <h3 className="text-xl font-semibold">Klasifikasi Taksonomi</h3>
           </div>
           <p className="text-gray-600">
-            Jelajahi spesies berdasarkan tingkatan taksonomi dari Kingdom hingga
-            Species.
+            Jelajahi spesies laut dari Kingdom hingga Species dengan sistem klasifikasi lengkap.
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow-lg">
+        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <div className="flex items-center space-x-4 mb-4">
-            <Library className="w-8 h-8 text-green-600" />
-            <h3 className="text-xl font-semibold">Katalog Spesies</h3>
+            <Network className="w-8 h-8 text-green-600" />
+            <h3 className="text-xl font-semibold">Phylum Beragam</h3>
           </div>
           <p className="text-gray-600">
-            Koleksi lengkap berbagai spesies biota laut dengan informasi detail.
+            Temukan keunikan spesies dari berbagai Phylum: Cnidaria, Echinodermata, Mollusca, dan lainnya.
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow-lg">
+        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <div className="flex items-center space-x-4 mb-4">
             <ImageIcon className="w-8 h-8 text-green-600" />
             <h3 className="text-xl font-semibold">Galeri Visual</h3>
           </div>
           <p className="text-gray-600">
-            Tampilan visual berkualitas tinggi untuk setiap spesies yang ada.
+            Dokumentasi visual berkualitas tinggi untuk setiap spesies dengan detail morfologi.
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow-lg">
+        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <div className="flex items-center space-x-4 mb-4">
-            <AlertTriangle className="w-8 h-8 text-green-600" />
-            <h3 className="text-xl font-semibold">Status Konservasi</h3>
+            <Home className="w-8 h-8 text-green-600" />
+            <h3 className="text-xl font-semibold">Habitat & Distribusi</h3>
           </div>
           <p className="text-gray-600">
-            Informasi status konservasi untuk memahami kondisi populasi spesies.
+            Pahami habitat dan lokasi ditemukan dari berbagai spesies biota laut.
           </p>
         </div>
       </div>
@@ -266,70 +260,111 @@ export default function Preview() {
     <div>
       <BackButton onClick={() => setView("home")} />
       <div className="space-y-4">
-        {[
-          {
-            title: "Kingdom",
-            description: "Klasifikasi tertinggi makhluk hidup",
-            icon: Crown,
-          },
-          {
-            title: "Phylum",
-            description: "Pengelompokan berdasarkan karakteristik dasar",
-            icon: Dna,
-          },
-          {
-            title: "Class",
-            description: "Pembagian berdasarkan ciri-ciri umum",
-            icon: Network,
-          },
-          {
-            title: "Ordo",
-            description: "Pengelompokan spesifik dalam kelas",
-            icon: GitBranch,
-          },
-          {
-            title: "Family",
-            description: "Kelompok organisme dengan hubungan dekat",
-            icon: Users,
-          },
-          {
-            title: "Genus",
-            description: "Kelompok spesies yang berkerabat dekat",
-            icon: TreePine,
-          },
-          {
-            title: "Species",
-            description: "Unit dasar klasifikasi makhluk hidup",
-            icon: Leaf,
-          },
-        ].map((category) => (
-          <div
-            key={category.title}
-            onClick={() => {
-              setSelectedRank(category.title);
-              setView("rankView");
-            }}
-            className="bg-white rounded-xl p-4 shadow-lg cursor-pointer hover:scale-105 transition-transform"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center flex-1">
-                <category.icon className="w-6 h-6 text-green-600 mr-3" />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {category.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {category.description}
-                  </p>
+        <div className="bg-white rounded-xl p-4 shadow-lg">
+          <h2 className="text-xl font-bold text-green-700 mb-4">Phylum dalam Biota Laut</h2>
+          {[
+            {
+              title: "Cnidaria",
+              description: "Kelompok hewan bertubuh lunak dengan sel penyengat",
+              species: ["Dipsastraea speciosa", "Favia speciosa"],
+              icon: Dna
+            },
+            {
+              title: "Echinodermata",
+              description: "Hewan berkulit duri dengan sistem saraf sederhana",
+              species: ["Holothuria atra", "Culcita sp."],
+              icon: Network
+            },
+            {
+              title: "Mollusca",
+              description: "Hewan lunak dengan cangkang atau kulit keras",
+              species: ["Tridacna maxima", "Pitar tumens", "Macrocypraea cervinetta"],
+              icon: GitBranch
+            },
+            {
+              title: "Porifera",
+              description: "Hewan paling sederhana, berbentuk seperti spons",
+              species: ["Spongia sp."],
+              icon: Leaf
+            }
+          ].map((phylum) => (
+            <div
+              key={phylum.title}
+              onClick={() => {
+                setSelectedRank("Phylum");
+                setView("rankView");
+              }}
+              className="bg-green-50 rounded-xl p-4 mb-3 cursor-pointer hover:bg-green-100 transition-colors"
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center flex-1">
+                  <phylum.icon className="w-6 h-6 text-green-600 mr-3" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800">{phylum.title}</h3>
+                    <p className="text-sm text-gray-600">{phylum.description}</p>
+                    <div className="mt-2 text-xs text-green-700">
+                      Spesies: {phylum.species.join(", ")}
+                    </div>
+                  </div>
                 </div>
+                <span className="text-green-500 text-xl">→</span>
               </div>
-              <span className="text-green-500 text-xl">→</span>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
+
+  const speciesPoems = {
+    "Dipsastraea speciosa": {
+      verse: "Coral queen so bright, with walls of light,\nYour polyps dance in aqua's might.",
+      italic: ["coral queen", "walls of light"]
+    },
+    "Holothuria atra": {
+      verse: "Midnight black and sleek you glide,\nThrough sandy realms where secrets hide.",
+      italic: ["midnight black", "sandy realms"]
+    },
+    "Favia speciosa": {
+      verse: "Maze of stone where life unfurls,\nYour labyrinth of coral swirls.",
+      italic: ["maze of stone", "labyrinth of coral"]
+    },
+    "Culcita sp.": {
+      verse: "Starfish round as golden bread,\nRadial arms so gently spread.",
+      italic: ["starfish round", "golden bread"]
+    },
+    "Tridacna maxima": {
+      verse: "Giant clam of oceanic grace,\nYour mantle shimmers in this place.",
+      italic: ["giant clam", "oceanic grace"]
+    },
+    "Macrocypraea cervinetta": {
+      verse: "Shell of wonder, spiral rare,\nWhispering secrets beyond compare.",
+      italic: ["shell of wonder", "spiral rare"]
+    },
+    "Pitar tumens": {
+      verse: "Bivalve filtering ocean's floor,\nLife's rhythm in each gentle roar.",
+      italic: ["bivalve filtering", "ocean's floor"]
+    }
+  };
+
+  const renderVerse = (verse, italicWords) => {
+    // Split the verse into words
+    const words = verse.split(/\s+/);
+
+    return words.map((word, index) => {
+      // Check if this word or a phrase containing this word should be italic
+      const shouldItalicize = italicWords.some(italicPhrase =>
+        verse.includes(italicPhrase) &&
+        italicPhrase.split(' ').includes(word)
+      );
+
+      return (
+        <span key={index}>
+          {shouldItalicize ? <em>{word}</em> : word}{' '}
+        </span>
+      );
+    });
+  };
 
   const renderRankView = () => {
     // Mengambil nilai unik berdasarkan selectedRank
@@ -450,8 +485,7 @@ export default function Preview() {
 
       <div className="space-y-6">
         {/* Image Section */}
-        {/* Image Section */}
-        <div className="relative w-full rounded-xl overflow-hidden"> {/* Menghapus h-64 */}
+        <div className="relative w-full rounded-xl overflow-hidden">
           <SpeciesImage
             src={selectedSpecies.imageUrl}
             alt={selectedSpecies.name}
@@ -531,25 +565,41 @@ export default function Preview() {
           <p className="text-gray-600 ml-7">{selectedSpecies.habitat}</p>
         </div>
 
-        {/* Conservation Status Section */}
+        {/* Lokasi Ditemukan Section */}
         <div className="space-y-2">
           <div className="flex items-center space-x-2">
-            <Shield className="w-5 h-5 text-green-600" />
-            <h3 className="font-semibold text-green-700">Status Konservasi</h3>
+            <GitBranch className="w-5 h-5 text-green-600" />
+            <h3 className="font-semibold text-green-700">Lokasi Ditemukan</h3>
           </div>
           <div className="ml-7">
             <span
-              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium
-                ${selectedSpecies.status === "Rentan"
-                  ? "bg-red-100 text-red-800"
-                  : "bg-yellow-100 text-yellow-800"
-                }`}
+              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-800`}
             >
-              <AlertTriangle className="w-4 h-4" />
-              <span>{selectedSpecies.status}</span>
+              <GitBranch className="w-4 h-4" />
+              <span>
+                {selectedSpecies.name === "Pitar tumens" || selectedSpecies.name === "Spisula subtruncata"
+                  ? "Pulau Setan"
+                  : "Pulau Cubadak"}
+              </span>
             </span>
           </div>
         </div>
+
+        {/* Puisi Spesies Section */}
+        {speciesPoems[selectedSpecies.name] && (
+          <div className="space-y-2 mt-4 bg-green-50 p-4 rounded-lg">
+            <div className="flex items-center space-x-2">
+              <Quote className="w-5 h-5 text-green-600" />
+              <h3 className="font-semibold text-green-700">Mereng: Puisi Spesies</h3>
+            </div>
+            <p className="text-gray-600 ml-7 italic">
+              {renderVerse(
+                speciesPoems[selectedSpecies.name].verse,
+                speciesPoems[selectedSpecies.name].italic
+              )}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
