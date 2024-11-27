@@ -8,7 +8,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center">
                         <Leaf className="w-6 h-6 text-green-600" />
-                        <span className="ml-2 font-bold text-gray-800">Dunia Invertebrata</span>
+                        <span className="ml-2 font-bold text-gray-800">DUNIA INVERTEBRATA</span>
                     </div>
                 </div>
             </div>
