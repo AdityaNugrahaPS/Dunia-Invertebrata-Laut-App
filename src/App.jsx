@@ -457,8 +457,9 @@ export default function Preview() {
 
                     {/* Species Name */}
                     <div className="text-center">
-                      <h3 className="text-lg font-semibold text-green-700">
+                      <h3 className="text-lg font-semibold text-green-700"><i>
                         {sp.name}
+                      </i>
                       </h3>
                       <p className="text-sm text-gray-600">{sp.habitat}</p>
                     </div>
@@ -542,8 +543,7 @@ export default function Preview() {
 
       <div className="space-y-6">
         {/* Image Section */}
-        {/* Image Section */}
-        <div className="relative w-full rounded-xl overflow-hidden"> {/* Menghapus h-64 */}
+        <div className="relative w-full rounded-xl overflow-hidden">
           <SpeciesImage
             src={selectedSpecies.imageUrl}
             alt={selectedSpecies.name}
@@ -556,7 +556,7 @@ export default function Preview() {
         <div className="flex items-center space-x-3">
           <Fish className="w-8 h-8 text-green-600" />
           <h2 className="text-2xl font-bold text-green-700">
-            {selectedSpecies.name}
+            <i>{selectedSpecies.name}</i>
           </h2>
         </div>
 
@@ -574,12 +574,6 @@ export default function Preview() {
             <div className="flex items-center space-x-2">
               <Calendar className="w-4 h-4 text-green-500" />
               <p>{selectedSpecies.author.year}</p>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Quote className="w-4 h-4 text-green-500" />
-              <p className="text-sm italic">
-                {selectedSpecies.author.citation}
-              </p>
             </div>
           </div>
         </div>
@@ -599,7 +593,7 @@ export default function Preview() {
                 className="flex justify-between border-b border-gray-200 py-2 hover:bg-gray-100 rounded px-2"
               >
                 <span className="text-gray-600">{rank}</span>
-                <span className="font-medium text-green-600">{value}</span>
+                <span className="font-medium text-green-600 italic">{value}</span>
               </div>
             ))}
           </div>
@@ -623,10 +617,10 @@ export default function Preview() {
           <p className="text-gray-600 ml-7">{selectedSpecies.habitat}</p>
         </div>
 
-        {/* Conservation Status Section diganti dengan Lokasi Ditemukan */}
+        {/* Lokasi Ditemukan Section */}
         <div className="space-y-2">
           <div className="flex items-center space-x-2">
-            <MapPin className="w-5 h-5 text-green-600" /> {/* Changed from GitBranch to MapPin */}
+            <MapPin className="w-5 h-5 text-green-600" />
             <h3 className="font-semibold text-green-700">Lokasi Ditemukan</h3>
           </div>
           <div className="ml-7">
@@ -641,9 +635,20 @@ export default function Preview() {
             </span>
           </div>
         </div>
+
+        {/* Citation Section */}
+        <div className="space-y-2">
+          <div className="flex items-center space-x-2">
+            <Quote className="w-4 h-4 text-green-500" />
+            <h3 className="font-semibold text-green-700">Referensi Publikasi</h3>
+          </div>
+          <p className="text-sm italic text-gray-600 ml-7">
+            {selectedSpecies.author.citation}
+          </p>
+        </div>
       </div>
     </div>
-  );
+  )
 
   return (
     <div className="relative min-h-screen">
