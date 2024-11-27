@@ -232,6 +232,48 @@ export default function Preview() {
       habitat: "Dasar laut berpasir atau berlumpur",
       status: "Belum Dievaluasi",
     },
+    {
+      name: "Fungia sp.",
+      imageUrl: "./images/fungia-sp.jpg",
+      author: {
+        name: "Lamarck",
+        year: 1801,
+        citation: "Lamarck, J.B. (1801). Systeme des animaux sans vertebres, ou Tableau general des classes, des ordres et des genres de ces animaux."
+      },
+      taxonomy: {
+        Kingdom: "Animalia",
+        Phylum: "Cnidaria",
+        Class: "Anthozoa",
+        Ordo: "Scleractinia",
+        Family: "Fungiidae",
+        Genus: "Fungia",
+        Species: "Fungia sp."
+      },
+      description: "Fungia sp. merupakan karang soliter dengan diameter mencapai 30 cm. Memiliki warna cerah seperti putih, kuning, merah muda, ungu, dan biru. Berbentuk cakram bulat atau oval dengan mulut di tengah yang dikelilingi tentakel. Menangkap organisme plantonik dan partikel makanan di kolom air. Reproduksi secara aseksual melalui pecahan tubuh. Hidup di laut dangkal atau zona neritik dengan kedalaman sekitar 50 m. Dimanfaatkan sebagai tempat berkembang biak ikan, hiasan, bahan kapur, dan taman laut rekreasi.",
+      habitat: "Laut dangkal, zona neritik",
+      status: "Belum Dievaluasi"
+    },
+    {
+      name: "Goniastrea retiformis",
+      imageUrl: "./images/goniastrea-retiformis.jpg",
+      author: {
+        name: "Lamarck",
+        year: 1816,
+        citation: "Lamarck, J.B. (1816). Histoire naturelle des animaux sans vertèbres, présentant les caractères généraux et particuliers de ces animaux, leur distribution, leurs classes, leurs familles, leurs genres, et la citation des principales espèces qui s'y rapportent; précédée d'une introduction offrant la détermination des caractères essentiels de l'animal, sa distinction du végétal et des autres corps naturels, enfin, l'exposition des principes fondamentaux de la zoologie. Tome second. Paris: Deterville."
+      },
+      taxonomy: {
+        Kingdom: "Animalia",
+        Phylum: "Cnidaria",
+        Class: "Anthozoa",
+        Ordo: "Scleractinia",
+        Family: "Merulinidae",
+        Genus: "Goniastrea",
+        Species: "Goniastrea retiformis"
+      },
+      description: "Koloni karang berbentuk massif, hemispherical, datar, atau columnar dengan ukuran lebih dari 1 meter. Koralit memiliki 4-6 sisi dengan septa panjang dan pendek bergantian. Septa tipis, lurus dengan lobus paliform berkembang baik. Warna seragam krem, coklat muda, kadang coklat, merah muda, atau hijau. Dapat bertahan di daerah dengan turbiditas dan sedimentasi tinggi. Ditemukan di perairan dangkal hingga kedalaman 15 meter, dengan kemampuan membentuk hamparan hingga 5 meter di dataran terumbu.",
+      habitat: "Perairan dangkal, zona intertidal",
+      status: "Belum Dievaluasi"
+    }
   ];
 
 
@@ -315,9 +357,9 @@ export default function Preview() {
             {
               title: "Cnidaria",
               description: "Kelompok hewan bertubuh lunak dengan sel penyengat",
-              species: ["Dipsastraea speciosa", "Favia speciosa"],
+              species: ["Dipsastraea speciosa", "Favia speciosa", "Fungia sp.", "Goniastrea retiformis"],
               icon: Dna,
-              count: 2
+              count: 4
             },
             {
               title: "Echinodermata",
