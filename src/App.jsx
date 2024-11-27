@@ -210,12 +210,13 @@ export default function Preview() {
       status: "Belum Dievaluasi",
     },
     {
-      name: "Spisula subtruncata",
-      imageUrl: "./images/spisula-subtruncata.jpg",
-      author: {
-        name: "Autor Belum Diketahui",
-        year: null,
-        citation: "",
+
+      "name": "Spisula subtruncata",
+      "imageUrl": "./images/spisula-subtruncata.jpg",
+      "author": {
+        "name": "da Costa, Edmund",
+        "year": 1778,
+        "citation": "da Costa, E. (1778). Historia naturalis testaceorum Britanniae, or, A catalogue of the shells of Great Britain and Ireland: systematically described and arranged according to the Linnean method : with exact figures from specimens in the author's cabinet"
       },
       taxonomy: {
         Kingdom: "Animalia",
