@@ -47,7 +47,7 @@ export default function Preview() {
       <div className="w-full bg-green-600 text-white p-8 text-center rounded-lg">
         <h1 className="text-3xl font-bold mb-4">Eksplorasi Dunia Invertebrata</h1>
         <p className="text-lg mb-6">
-          Temukan keragaman hayati laut Indonesia melalui klasifikasi dan deskripsi spesies
+          Penjelajahan Invertebrata, menjelajahi Dunia Hewan Tak Bertulang Belakang
         </p>
         <button
           onClick={() => setView("categories")}
