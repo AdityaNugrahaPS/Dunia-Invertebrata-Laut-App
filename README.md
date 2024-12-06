@@ -4,7 +4,7 @@ Berikut adalah README yang sudah dihapus bagian struktur proyeknya:
 
 Selamat datang di **Dunia Invertebrata Laut App**, aplikasi interaktif berbasis React yang memberikan informasi tentang spesies invertebrata laut. Panduan ini akan membantu Anda mengatur proyek ini di sistem Anda dengan mudah.
 
-🌐 **Coba Sekarang**: [Dunia Invertebrata Laut](https://Dunia-Invertebrata-Laut-Appvercel.app/)
+🌐 **Coba Sekarang**: [Dunia Invertebrata Laut](https://dunia-invertebrata-laut-app.vercel.app/)
 
 ---
 
