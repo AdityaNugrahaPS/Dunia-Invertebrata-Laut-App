@@ -1,7 +1,7 @@
 import { useState } from "react";
-import speciesData from "./components/speciesData";
+
 import ParticlesBackground from './components/ParticlesBackground';
-import formattedSpeciesData from "./components/formattedSpeciesData";
+import formattedSpeciesData from "./data/formattedSpeciesData";
 // Hapus import speciesData jika ada
 import Navbar from "./components/Navbar";
 import './particles.css';
