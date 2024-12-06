@@ -1,6 +1,4 @@
-Berikut adalah pembaruan README dengan nama proyek yang benar.
-
----
+Berikut adalah README yang sudah dihapus bagian struktur proyeknya:
 
 # 🌊 Dunia Invertebrata Laut App
 
@@ -95,25 +93,6 @@ Jika Anda ingin menambahkan dependensi baru atau memastikan semuanya terpasang, 
   ```bash
   npm install tsparticles
   ```
-
----
-
-## 📂 Struktur Proyek
-
-```
-src/
-├── components/          # Komponen utama aplikasi
-│   ├── Navbar.js        # Navigasi
-│   ├── Footer.js        # Footer
-│   ├── ParticlesBackground.js  # Animasi latar belakang
-├── data/
-│   ├── speciesData.js   # Informasi spesies laut
-│   └── formattedSpeciesData.js # Data yang sudah diolah
-├── App.js               # File utama aplikasi
-├── index.js             # Titik masuk aplikasi
-├── styles/              # Direktori untuk file CSS
-│   └── particles.css    # Styling untuk animasi partikel
-```
 
 ---
 
